@@ -20,8 +20,6 @@ Work experience
   * Duties included: Network attack and defense
   * Supervisor: Yuxian Jia
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+# Paper Reviewer for Journals
+
+- IEEE Transactions on Vehicular Technology (TVT)
