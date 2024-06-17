@@ -20,6 +20,10 @@ Work experience
   * Duties included: Network attack and defense
   * Supervisor: Yuxian Jia
 
+# Paper Reviewer for Conferences
+
+- ACM Turing Celebration Conference China (ACM TURC)
+
 # Paper Reviewer for Journals
 
 - IEEE Transactions on Vehicular Technology (TVT)
