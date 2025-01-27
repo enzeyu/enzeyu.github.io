@@ -29,4 +29,5 @@ Work experience
 # Paper Reviewer for Journals
 
 - IEEE Transactions on Vehicular Technology (TVT)
-- Chinese Journal of Electronics
+- Chinese Journal of Electronics (CJE)
+- The Journal of Supercomputing
