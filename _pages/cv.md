@@ -31,4 +31,6 @@ Work experience
 - IEEE Transactions on Vehicular Technology (TVT)
 - Chinese Journal of Electronics (CJE)
 - Peer-to-Peer Networking and Applications (PPNA)
+- Cluster Computing
 - The Journal of Supercomputing
+- Scientific Reports
