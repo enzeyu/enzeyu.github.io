@@ -28,6 +28,7 @@ Work experience
 
 # Paper Reviewer for Journals
 
+- Computer Networks (CN)
 - IEEE Transactions on Vehicular Technology (TVT)
 - Chinese Journal of Electronics (CJE)
 - Peer-to-Peer Networking and Applications (PPNA)
