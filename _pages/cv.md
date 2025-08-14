@@ -22,6 +22,7 @@ Work experience
 
 # Paper Reviewer for Conferences
 
+- AAAI Conference on Artificial Intelligence (AAAI)
 - High Performance Computing and Communications (HPCC)
 - International Conference on Network and System Security (NSS)
 - ACM Turing Celebration Conference China (ACM TURC)
