@@ -25,6 +25,7 @@ Work experience
 - AAAI Conference on Artificial Intelligence (AAAI)
 - High Performance Computing and Communications (HPCC)
 - International Conference on Network and System Security (NSS)
+- IEEE Annual Congress on Artificial Intelligence of Things (IEEE AIoT)
 - ACM Turing Celebration Conference China (ACM TURC)
 
 # Paper Reviewer for Journals
