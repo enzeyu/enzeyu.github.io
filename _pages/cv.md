@@ -30,6 +30,7 @@ Work experience
 
 # Paper Reviewer for Journals
 
+- IEEE Transactions on Dependable and Secure Computing (TDSC)
 - Computer Networks (CN)
 - IEEE Transactions on Vehicular Technology (TVT)
 - Chinese Journal of Electronics (CJE)
