@@ -33,6 +33,7 @@ Work experience
 - IEEE Transactions on Dependable and Secure Computing (TDSC)
 - Computer Networks (CN)
 - IEEE Transactions on Vehicular Technology (TVT)
+- IEEE Transactions on Consumer Electronics (TCE) 
 - Chinese Journal of Electronics (CJE)
 - Peer-to-Peer Networking and Applications (PPNA)
 - Cluster Computing
