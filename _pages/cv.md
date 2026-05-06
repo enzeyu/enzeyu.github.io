@@ -37,5 +37,6 @@ Work experience
 - Chinese Journal of Electronics (CJE)
 - Peer-to-Peer Networking and Applications (PPNA)
 - Cluster Computing
+- International Journal of Communication Systems
 - The Journal of Supercomputing
 - Scientific Reports
