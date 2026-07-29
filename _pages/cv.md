@@ -34,6 +34,7 @@ Work experience
 - Computer Networks (CN)
 - IEEE Transactions on Vehicular Technology (TVT)
 - IEEE Transactions on Consumer Electronics (TCE) 
+- IEEE Open Journal of the Communications Society
 - Chinese Journal of Electronics (CJE)
 - Peer-to-Peer Networking and Applications (PPNA)
 - Cluster Computing
