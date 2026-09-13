@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="余恩泽，南京大学计算机学院博士研究生，研究方向包括边缘智能、大小模型协同与网络安全。">
+  <meta name="theme-color" content="#33205f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="余恩泽 · 个人主页">
+  <meta property="og:description" content="研究方向：边缘智能、大小模型协同与网络安全。">
+  <meta property="og:image" content="assets/og.png">
+  <meta property="og:url" content="https://enzeyu.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="余恩泽 · 个人主页">
+  <meta name="twitter:description" content="研究方向：边缘智能、大小模型协同与网络安全。">
+  <meta name="twitter:image" content="assets/og.png">
+  <title>余恩泽 · 个人主页</title>
+  <link rel="icon" href="assets/profile.png">
+  <style>
+    :root {
+      --purple-950: #24143f;
+      --purple-900: #33205f;
+      --purple-800: #49307d;
+      --purple-700: #62449b;
+      --purple-500: #8c6fc0;
+      --purple-100: #eee8f7;
+      --purple-50: #f8f5fc;
+      --gold: #d6b25e;
+      --ink: #262330;
+      --muted: #65606f;
+      --line: #e8e3ed;
+      --paper: #ffffff;
+      --canvas: #f7f5f8;
+      --shadow: 0 14px 40px rgba(45, 29, 73, .08);
+      --shadow-hover: 0 20px 50px rgba(45, 29, 73, .14);
+      --radius: 16px;
+      --max-width: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--purple-700); }
+    a:hover { color: var(--purple-950); }
+    img { max-width: 100%; }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 2000;
+      transform: translateY(-160%);
+      padding: 10px 14px;
+      color: #fff;
+      background: var(--purple-950);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(73, 48, 125, .09);
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 6px 22px rgba(46, 30, 73, .05);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .wordmark {
+      color: var(--purple-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      display: block;
+      padding: 20px 11px 17px;
+      color: #514a5b;
+      font-size: .88rem;
+      font-weight: 650;
+      letter-spacing: .01em;
+      text-decoration: none;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      right: 11px;
+      bottom: 13px;
+      left: 11px;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: center;
+      background: linear-gradient(90deg, var(--purple-700), var(--gold));
+      transition: transform .2s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after { transform: scaleX(1); }
+
+    .menu-button {
+      display: none;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: var(--purple-900);
+      background: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        radial-gradient(circle at 82% 20%, rgba(214, 178, 94, .22), transparent 24%),
+        linear-gradient(135deg, var(--purple-950) 0%, var(--purple-800) 55%, var(--purple-500) 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -140px;
+      right: -80px;
+      width: 560px;
+      height: 560px;
+      border: 1px solid rgba(255, 255, 255, .11);
+      border-radius: 50%;
+      box-shadow: 0 0 0 80px rgba(255, 255, 255, .018), 0 0 0 160px rgba(255, 255, 255, .014);
+    }
+
+    .hero-inner {
+      position: relative;
+      min-height: 540px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(46px, 8vw, 96px);
+      padding-block: 72px;
+    }
+
+    .portrait-wrap { position: relative; }
+
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 20px;
+      left: -18px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(214, 178, 94, .65);
+      border-radius: 18px;
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 280px;
+      height: 350px;
+      aspect-ratio: 4 / 5;
+      border: 5px solid rgba(255, 255, 255, .2);
+      border-radius: 18px;
+      box-shadow: 0 24px 54px rgba(11, 5, 24, .32);
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #e9d9ad;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.1rem, 7vw, 5.6rem);
+      font-weight: 500;
+      letter-spacing: -.04em;
+      line-height: .98;
+    }
+
+    .chinese-name {
+      display: block;
+      margin-top: 11px;
+      color: rgba(255, 255, 255, .76);
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      font-weight: 400;
+      letter-spacing: .18em;
+    }
+
+    .hero-role {
+      max-width: 650px;
+      margin: 24px 0 10px;
+      font-size: clamp(1.18rem, 2vw, 1.45rem);
+      font-weight: 650;
+    }
+
+    .hero-focus {
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255, 255, 255, .78);
+      font-size: 1rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin: 25px 0 0;
+      padding: 0;
+      color: rgba(255, 255, 255, .86);
+      list-style: none;
+    }
+
+    .hero-meta a { color: inherit; text-decoration: none; }
+    .hero-meta a:hover { color: #fff; text-decoration: underline; }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 17px;
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255, 255, 255, .1);
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      color: #fff;
+      background: rgba(255, 255, 255, .2);
+      box-shadow: 0 10px 24px rgba(15, 7, 32, .2);
+    }
+
+    .button.primary {
+      border-color: #fff;
+      color: var(--purple-950);
+      background: #fff;
+    }
+
+    main { padding-block: 58px 90px; }
+
+    .section {
+      margin-bottom: 34px;
+      padding: clamp(28px, 4.5vw, 52px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .section-header {
+      margin-bottom: 34px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-title {
+      position: relative;
+      margin: 0;
+      padding-bottom: 12px;
+      color: var(--purple-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.85rem, 3.5vw, 2.55rem);
+      font-weight: 600;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -23px;
+      left: 0;
+      width: 76px;
+      height: 3px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--purple-700), var(--gold));
+    }
+
+    .about-grid {
+      display: block;
+    }
+
+    .prose p { margin: 0 0 18px; }
+    .prose p:last-child { margin-bottom: 0; }
+
+    .timeline,
+    .publication-list,
+    .clean-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 22px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 109px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 42px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 104px;
+      width: 9px;
+      height: 9px;
+      border: 3px solid var(--paper);
+      border-radius: 50%;
+      background: var(--purple-700);
+      box-shadow: 0 0 0 1px var(--purple-500);
+    }
+
+    .timeline-year {
+      padding-top: 2px;
+      color: var(--purple-700);
+      font-size: .83rem;
+      font-weight: 800;
+      text-align: right;
+    }
+
+    .timeline-item h3,
+    .interest-card h3,
+    .experience-card h3 {
+      margin: 0 0 3px;
+      color: var(--purple-950);
+      font-size: 1.06rem;
+      line-height: 1.4;
+    }
+
+    .timeline-item p { margin: 0; color: var(--muted); }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .interest-card,
+    .experience-card,
+    .service-card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(145deg, #fff, #fbf9fd);
+    }
+
+    .interest-number {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--purple-500);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .interest-card p,
+    .experience-card p,
+    .service-card p { margin: 8px 0 0; color: var(--muted); }
+
+    .publication-list { display: grid; gap: 16px; }
+
+    .publication-item {
+      position: relative;
+      padding: 24px 24px 22px 28px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--purple-100);
+      border-radius: 11px;
+      background: #fff;
+      transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .publication-item:hover {
+      transform: translateX(4px);
+      border-left-color: var(--purple-700);
+      box-shadow: 0 13px 30px rgba(51, 32, 95, .08);
+    }
+
+    .pub-topline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 25px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      color: var(--purple-800);
+      background: var(--purple-100);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .tag.year { color: #73561a; background: #f7eed8; }
+
+    .pub-title {
+      margin: 0 0 8px;
+      color: var(--purple-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .pub-title a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .pub-authors { margin: 0 0 5px; color: #4f4958; font-size: .92rem; line-height: 1.55; }
+    .pub-authors strong { color: var(--purple-900); }
+    .pub-venue { margin: 0; color: var(--muted); font-size: .9rem; font-style: italic; }
+
+    .subhead {
+      margin: 34px 0 18px;
+      color: var(--purple-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .experience-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    .experience-label {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--purple-700);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .experience-meta { color: var(--purple-700) !important; font-size: .86rem; font-weight: 700; }
+
+    .mini-list {
+      margin: 14px 0 0;
+      padding-left: 19px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .mini-list li + li { margin-top: 8px; }
+    .experience-card > .mini-list { margin-top: 0; }
+
+    .award-columns,
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .award-group,
+    .service-card {
+      display: grid;
+      grid-template-columns: minmax(180px, .34fr) minmax(0, 1.66fr);
+      gap: 32px;
+      align-items: start;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(145deg, #fff, #fbf9fd);
+    }
+
+    .award-group h3,
+    .service-card h3 {
+      margin: 0;
+      color: var(--purple-950);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.22rem;
+    }
+
+    .clean-list { display: grid; gap: 11px; }
+
+    .clean-list li {
+      position: relative;
+      padding-left: 18px;
+      color: #4f4958;
+      font-size: .94rem;
+    }
+
+    .clean-list li::before {
+      content: "";
+      position: absolute;
+      top: .72em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-700), var(--gold));
+    }
+
+    .site-footer {
+      padding: 40px 0 52px;
+      color: rgba(255, 255, 255, .72);
+      background: var(--purple-950);
+      font-size: .9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .site-footer p { margin: 0; }
+    .site-footer a { color: #fff; text-underline-offset: 3px; }
+
+    .visitor-stats {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 12px;
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .visitor-item {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .visitor-value {
+      min-width: 2ch;
+      color: #fff;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .visitor-separator { color: rgba(255, 255, 255, .34); }
+
+    :focus-visible {
+      outline: 3px solid #f2cf76;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 940px) {
+      .nav-inner { flex-wrap: wrap; gap: 0; padding-block: 12px; }
+      .menu-button { display: inline-flex; }
+      .nav-links { display: none; flex-basis: 100%; padding-top: 8px; }
+      .nav-links.is-open { display: grid; grid-template-columns: repeat(2, 1fr); }
+      .nav-links a { padding: 10px 9px; }
+      .nav-links a::after { bottom: 5px; }
+      .hero-inner { grid-template-columns: 220px 1fr; min-height: auto; gap: 50px; }
+      .portrait { width: 220px; height: 275px; }
+      .section-title::after { bottom: -23px; }
+      .interest-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      .container { width: min(calc(100% - 28px), var(--max-width)); }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; padding-block: 52px; text-align: center; }
+      .portrait-wrap { width: 190px; margin-inline: auto; }
+      .portrait { width: 190px; height: 238px; }
+      .hero-meta, .link-row { justify-content: center; }
+      .section { margin-bottom: 22px; padding: 28px 22px; border-radius: 13px; }
+      .section-header { margin-bottom: 27px; }
+      .timeline::before { left: 7px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 2px; padding-left: 28px; }
+      .timeline-item::before { top: 8px; left: 2px; }
+      .timeline-year { text-align: left; }
+      .experience-card,
+      .award-group,
+      .service-card { grid-template-columns: 1fr; gap: 16px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Enze Yu",
+    "alternateName": "余恩泽",
+    "url": "https://enzeyu.github.io/",
+    "image": "https://enzeyu.github.io/assets/profile.png",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "Nanjing University"},
+    "sameAs": [
+      "https://github.com/enzeyu",
+      "https://scholar.google.com/citations?user=IPcwz2sAAAAJ&hl=zh-CN&oi=ao",
+      "https://www.researchgate.net/profile/Enze-Yu-2"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+
+  <nav class="site-nav" aria-label="主导航">
+    <div class="container nav-inner">
+      <a class="wordmark" href="#top">Enze Yu <span lang="zh-CN">· 余恩泽</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">个人简介</a></li>
+        <li><a href="#education">教育背景</a></li>
+        <li><a href="#research">研究方向</a></li>
+        <li><a href="#publications">学术论文</a></li>
+        <li><a href="#experience">科研项目</a></li>
+        <li><a href="#awards">荣誉获奖</a></li>
+        <li><a href="#service">学术服务</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/profile.png" width="560" height="700" alt="余恩泽的个人照片">
+      </div>
+      <div>
+        <p class="eyebrow">个人主页</p>
+        <h1>Enze Yu <span class="chinese-name" lang="zh-CN">余恩泽</span></h1>
+        <p class="hero-role">南京大学计算机学院 · 博士研究生</p>
+        <p class="hero-focus">边缘智能 · 大小模型协同 · 网络安全</p>
+        <ul class="hero-meta" aria-label="联系信息">
+          <li>📍 中国 · 南京</li>
+          <li>✉ <a href="mailto:enzey@seu.edu.cn">enzeyu [at] smail.nju.edu.cn</a></li>
+        </ul>
+        <div class="link-row" aria-label="学术主页与文档">
+          <a class="button primary" href="https://scholar.google.com/citations?user=IPcwz2sAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="button" href="https://github.com/enzeyu" target="_blank" rel="noopener">GitHub</a>
+          <a class="button" href="https://www.researchgate.net/profile/Enze-Yu-2" target="_blank" rel="noopener">ResearchGate</a>
+          <a class="button" href="assets/resume.pdf">个人简历</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section class="section" id="about">
+      <div class="section-header">
+        <h2 class="section-title">个人简介</h2>
+      </div>
+      <div class="about-grid">
+        <div class="prose">
+          <p>我是<a href="https://www.nju.edu.cn/" target="_blank" rel="noopener">南京大学</a><a href="https://cs.nju.edu.cn/main.htm" target="_blank" rel="noopener">计算机学院</a>博士研究生，主要研究方向包括边缘智能、大小模型协同与网络安全。</p>
+          <p>目前，我有幸在南京大学师从<a href="https://cs.nju.edu.cn/daihp/index.htm" target="_blank" rel="noopener">戴海鹏教授</a>。此前，我在东南大学网络空间安全学院师从<a href="https://cyber.seu.edu.cn/xyw/list.htm" target="_blank" rel="noopener">许昱玮教授</a>。</p>
+          <p>我的研究关注异构边缘设备之间的大小模型高效协同学习，以及面向实际网络环境的可靠边缘智能系统设计。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-header">
+        <h2 class="section-title">教育背景</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-year">2023–2027</span>
+          <div><h3>计算机科学与技术 · 博士</h3><p>南京大学 · 中国南京 · 预计 2027 年毕业</p></div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2020–2023</span>
+          <div><h3>网络空间安全 · 硕士</h3><p>东南大学 · 中国南京</p></div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-year">2016–2020</span>
+          <div><h3>信息安全 · 学士</h3><p>新疆大学 · 中国乌鲁木齐</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-header">
+        <h2 class="section-title">研究方向</h2>
+      </div>
+      <div class="interest-grid">
+        <article class="interest-card"><span class="interest-number">01</span><h3>边缘智能</h3><p>面向资源受限端侧与边缘设备的协同学习和异构学习。</p></article>
+        <article class="interest-card"><span class="interest-number">02</span><h3>大小模型协同</h3><p>边缘环境下的大模型小模型协同训练、推理等。</p></article>
+        <article class="interest-card"><span class="interest-number">03</span><h3>网络安全</h3><p>人工智能安全、恶意流量监测。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-header">
+        <h2 class="section-title">学术论文</h2>
+      </div>
+      <ol class="publication-list" id="publication-list">
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">ICWS · CCF-B</span><span class="tag year">2026</span></div>
+          <h3 class="pub-title">Self-Evolving Neural Systems for Heterogeneous Mobile Devices</h3>
+          <p class="pub-authors">Zhao Li, Peiqi Zhang, <strong>Enze Yu</strong>, Haipeng Dai, Qiang He, Shanyun Liu</p>
+          <p class="pub-venue">IEEE International Conference on Web Services (ICWS), 2026</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">TPDS · CCF-A</span><span class="tag year">2026</span></div>
+          <h3 class="pub-title">Edge-end Heterogeneous Collaborative Learning by Prototype Selection and Edge Association</h3>
+          <p class="pub-authors"><strong>Enze Yu</strong>, Haipeng Dai, Haihan Zhang, Yuben Qu, Tao Wu, Penghuan Cheng, Sujin Hou, Zhenzhe Zheng, Fan Wu, Guihai Chen</p>
+          <p class="pub-venue">IEEE Transactions on Parallel and Distributed Systems (TPDS), 2026</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">WWW · CCF-A</span><span class="tag year">2026</span></div>
+          <h3 class="pub-title">Prototype Augmentation-based Edge-end Heterogeneous Collaborative Learning</h3>
+          <p class="pub-authors"><strong>Enze Yu</strong>, Penghuan Cheng, Haipeng Dai, Haihan Zhang, Sujin Hou, Meng Li, Zhenzhe Zheng, Qiang He, Guihai Chen</p>
+          <p class="pub-venue">The ACM Web Conference (WWW), 2026</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">LCN · CCF-C</span><span class="tag year">2025</span></div>
+          <h3 class="pub-title">Prototype-Based Semi-Asynchronous Edge-End Collaborative Learning with Client Clustering</h3>
+          <p class="pub-authors">Sujin Hou, <strong>Enze Yu</strong>, Fang Mei, Yuben Qu, Haihan Zhang, Haipeng Dai</p>
+          <p class="pub-venue">IEEE 50th Conference on Local Computer Networks (LCN), 2025 · Co-first author</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">TMC · CCF-A</span><span class="tag year">2025</span></div>
+          <h3 class="pub-title">Optimizing Monitoring Utility of Unmanned Aerial Vehicles Considering Adverse Effects</h3>
+          <p class="pub-authors">Haihan Zhang, Haipeng Dai, Yu Qiu, <strong>Enze Yu</strong>, Ruiben Zhou, Weijun Wang, Jingwu Wang, Guihai Chen</p>
+          <p class="pub-venue">IEEE Transactions on Mobile Computing (TMC), 2025</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">TCE · SCI-2</span><span class="tag year">2025</span></div>
+          <h3 class="pub-title">Task Offloading and Resource Allocation Based on Reinforcement Learning and Load Balancing in Vehicular Networking</h3>
+          <p class="pub-authors">Shujuan Tian, Shuhuan Xiang, Ziqi Zhou, Haipeng Dai, <strong>Enze Yu</strong>, Qingyong Deng</p>
+          <p class="pub-venue">IEEE Transactions on Consumer Electronics (TCE), 2025</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">SPE · CCF-B</span><span class="tag year">2024</span></div>
+          <h3 class="pub-title"><a href="assets/papers/paper5.pdf">Prototype-based collaborative learning in UAV-assisted edge computing networks</a></h3>
+          <p class="pub-authors"><strong>Enze Yu</strong>, Haipeng Dai, Haihan Zhang, Zhenzhe Zheng, Jun Zhao, Guihai Chen</p>
+          <p class="pub-venue">Software: Practice and Experience (SPE), 2024</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">TVT · SCI-2</span><span class="tag year">2024</span></div>
+          <h3 class="pub-title"><a href="assets/papers/paper4.pdf">R-manager: Consortium Blockchain-based Vehicle Reputation Management for High-quality Reports in Traffic-oriented Crowdsourcing</a></h3>
+          <p class="pub-authors"><strong>Enze Yu</strong>, Yuwei Xu, Lin Gao, Jie Cao, Qiao Xiang, Liang He</p>
+          <p class="pub-venue">IEEE Transactions on Vehicular Technology (TVT), 2024</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">CN · CCF-B</span><span class="tag year">2024</span></div>
+          <h3 class="pub-title">GateKeeper: An UltraLite malicious traffic identification method with dual-aspect optimization strategies on IoT gateways</h3>
+          <p class="pub-authors">Jie Cao, Yuwei Xu, <strong>Enze Yu</strong>, Qiao Xiang, Kehui Song, Liang He, Guang Cheng</p>
+          <p class="pub-venue">Computer Networks, 2024</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">TVT · SCI-2</span><span class="tag year">2023</span></div>
+          <h3 class="pub-title"><a href="assets/papers/paper2.pdf">R-Tracing: Consortium Blockchain-Based Vehicle Reputation Management for Resistance to Malicious Attacks and Selfish Behaviors</a></h3>
+          <p class="pub-authors">Yuwei Xu, <strong>Enze Yu</strong>, Yuxing Song, Fei Tong, Qiao Xiang, Liang He</p>
+          <p class="pub-venue">IEEE Transactions on Vehicular Technology (TVT), 2023</p>
+        </li>
+        <li class="publication-item">
+          <div class="pub-topline"><span class="tag">CEA · CCF T2</span><span class="tag year">2019</span></div>
+          <h3 class="pub-title"><a href="assets/papers/paper1.pdf">Phishing website detection method based on integrated learning</a></h3>
+          <p class="pub-authors"><strong>Enze Yu</strong>, Nurbol, Qing Yu</p>
+          <p class="pub-venue">Computer Engineering and Applications, 2019</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-header">
+        <h2 class="section-title">科研项目</h2>
+      </div>
+        <article class="experience-card">
+          <div>
+            <span class="experience-label">科研项目</span>
+            <h3>复杂边缘环境下资源高效协作学习方法研究</h3>
+            <p class="experience-meta">江苏省研究生创新计划项目 · 2025 年 5 月–2026 年 5 月</p>
+          </div>
+          <ul class="mini-list"><li>负责异构边端协作学习、资源优化与真实设备验证，完成项目申报、组织实施及成果产出。</li></ul>
+        </article>
+        <article class="experience-card">
+          <div>
+            <span class="experience-label">科研项目</span>
+            <h3>自演进异构融合的边缘智能计算系统</h3>
+            <p class="experience-meta">国家重点研发计划 · 2023 年 12 月–2026 年 11 月</p>
+          </div>
+          <ul class="mini-list"><li>负责多机协同持续学习、跨课题技术统筹与场景落地，深度参与项目申报、执行与验收全过程。</li></ul>
+        </article>
+        <article class="experience-card">
+          <div>
+            <span class="experience-label">科研项目</span>
+            <h3>超大城市生态数字孪生与智慧运维</h3>
+            <p class="experience-meta">学科突破先导项目 · 2025 年 5 月–至今</p>
+          </div>
+          <ul class="mini-list"><li>负责时空大小模型协同技术方案与申报论证，参与总体技术路线设计及跨任务资源协同。</li></ul>
+        </article>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <div>
+            <span class="experience-label">科研项目</span>
+            <h3>以链治链</h3>
+            <p class="experience-meta">国家重点研发计划 · 2020 年 12 月–2023 年 5 月</p>
+          </div>
+          <ul class="mini-list"><li>设计包含奖励、惩罚与税收机制的车辆信誉模型，并通过理论分析与仿真实验验证其有效性。</li><li>设计并实现基于联盟链的分层信誉管理系统，通过真机实验验证系统吞吐量与时延性能。</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="awards">
+      <div class="section-header">
+        <h2 class="section-title">荣誉与获奖</h2>
+      </div>
+      <div class="award-columns">
+        <div class="award-group">
+          <h3>荣誉</h3>
+          <ul class="clean-list">
+            <li>全国网络空间安全人才培养基地百名精英，2019</li>
+            <li>新疆大学优秀本科毕业生，2020</li>
+            <li>新疆大学优秀毕业设计，2020</li>
+            <li>第十二届“芙蓉学子·榜样力量”优秀大学生最佳团队，2017</li>
+            <li>新疆大学优秀共青团员，2018</li>
+          </ul>
+        </div>
+        <div class="award-group">
+          <h3>竞赛获奖</h3>
+          <ul class="clean-list">
+            <li>全国大学生英语竞赛二等奖，2019</li>
+            <li>全国大学生信息安全竞赛三等奖，2019</li>
+            <li>全国高校信息安全能力创新大赛西北赛区二等奖，2019</li>
+            <li>全国大学生“西普杯”信息安全铁人三项赛二等奖，2018</li>
+            <li>新疆维吾尔自治区信息安全竞赛特等奖，2019</li>
+            <li>网络安全尖峰训练营优秀战队三等奖，2018</li>
+            <li>新疆大学信息科学与工程学院新生辩论赛第一名，2016</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="service">
+      <div class="section-header">
+        <h2 class="section-title">学术服务</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>会议审稿人</h3>
+          <ul class="clean-list">
+            <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
+            <li>High Performance Computing and Communications (HPCC)</li>
+            <li>International Conference on Network and System Security (NSS)</li>
+            <li>IEEE Annual Congress on Artificial Intelligence of Things (IEEE AIoT)</li>
+            <li>ACM Turing Celebration Conference China (ACM TURC)</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h3>期刊审稿人</h3>
+          <ul class="clean-list">
+            <li>IEEE Transactions on Dependable and Secure Computing (TDSC)</li>
+            <li>Computer Networks (CN)</li>
+            <li>IEEE Transactions on Vehicular Technology (TVT)</li>
+            <li>IEEE Transactions on Consumer Electronics (TCE)</li>
+            <li>IEEE Open Journal of the Communications Society</li>
+            <li>Chinese Journal of Electronics (CJE)</li>
+            <li>Peer-to-Peer Networking and Applications (PPNA)</li>
+            <li>Cluster Computing</li>
+            <li>International Journal of Communication Systems</li>
+            <li>The Journal of Supercomputing</li>
+            <li>Scientific Reports</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> 余恩泽</p>
+      <div class="visitor-stats" aria-label="网站访问统计" title="统计由不蒜子提供">
+        <span class="visitor-item">独立访客 <strong id="busuanzi_site_uv" class="visitor-value">加载中…</strong> 人</span>
+        <span class="visitor-separator" aria-hidden="true">·</span>
+        <span class="visitor-item">页面访问 <strong id="busuanzi_site_pv" class="visitor-value">加载中…</strong> 次</span>
+      </div>
+      <p>最后更新：2026 年 9 月 · <a href="#top">返回顶部 ↑</a></p>
+    </div>
+  </footer>
+
+  <script id="busuanzi-script" src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer onerror="document.documentElement.dataset.counterError='true'"></script>
+  <script src="data/publications.js"></script>
+  <script>
+    const markVisitorCounterUnavailable = () => {
+      document.querySelectorAll('.visitor-value').forEach((element) => {
+        if (element.textContent.includes('加载')) element.textContent = '暂未加载';
+      });
+    };
+
+    if (document.documentElement.dataset.counterError === 'true') {
+      markVisitorCounterUnavailable();
+    }
+    window.setTimeout(markVisitorCounterUnavailable, 10000);
+
+    const escapeHtml = (value) => String(value ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+
+    const publicationList = document.getElementById('publication-list');
+    if (Array.isArray(window.PUBLICATIONS)) {
+      publicationList.innerHTML = window.PUBLICATIONS.map((paper) => {
+        const title = escapeHtml(paper.title);
+        const linkedTitle = paper.link
+          ? `<a href="${escapeHtml(paper.link)}">${title}</a>`
+          : title;
+        const authors = escapeHtml(paper.authors)
+          .replaceAll('Enze Yu', '<strong>Enze Yu</strong>');
+        return `
+          <li class="publication-item">
+            <div class="pub-topline">
+              <span class="tag">${escapeHtml(paper.tag)}</span>
+              <span class="tag year">${escapeHtml(paper.year)}</span>
+            </div>
+            <h3 class="pub-title">${linkedTitle}</h3>
+            <p class="pub-authors">${authors}</p>
+            <p class="pub-venue">${escapeHtml(paper.venue)}</p>
+          </li>`;
+      }).join('');
+    }
+
+    const button = document.querySelector('.menu-button');
+    const links = document.querySelector('.nav-links');
+    button.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', String(open));
+    });
+    links.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        links.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

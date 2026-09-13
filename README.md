@@ -1,31 +1,46 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# 余恩泽学术个人主页
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+这是一个可直接部署到 GitHub Pages 的纯静态网站，无需安装任何构建工具。
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+## 部署方式
 
-# Instructions
+1. 将 `index.html`、`data/` 和 `assets/` 完整复制到 `enzeyu.github.io` 仓库根目录。
+2. 提交并推送到 GitHub Pages 使用的分支，一般为 `main` 或 `master`。
+3. 在 GitHub 打开 **Settings → Pages**，选择 **Deploy from a branch**，并选择仓库根目录。
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## 新增或修改论文
 
-See more info at https://academicpages.github.io/
+论文信息统一保存在 `data/publications.js`。修改论文题目、作者、年份、会议、级别或链接时，只需编辑这个文件。
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+新增带 PDF 的论文需要两步：
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+1. 将 PDF 放入 `assets/papers/`，例如 `paper12.pdf`。
+2. 在 `data/publications.js` 的 `window.PUBLICATIONS` 数组中复制一条记录并修改：
 
-# Changelog -- bugfixes and enhancements
+```js
+{
+  tag: "会议简称 · 级别",
+  year: "2027",
+  title: "论文英文题目",
+  authors: "Enze Yu, Other Authors",
+  venue: "期刊或会议全称, 2027",
+  link: "assets/papers/paper12.pdf"
+}
+```
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+如果没有 PDF 或外部链接，把 `link` 写成空字符串 `""`。仅向文件夹中添加 PDF 不会自动显示论文，因为纯静态 GitHub Pages 无法自动读取服务器目录。
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+## 访客统计
+
+页脚已经接入不蒜子的站点统计，会显示独立访客数（UV）和页面访问量（PV）。统计在网站部署到 `enzeyu.github.io` 后生效；直接在电脑上双击打开网页或使用本地预览时，可能显示“暂未加载”，这是正常现象。
+
+访客数据从启用统计后开始累积，无法补回启用前的历史访问量。如不希望使用第三方统计，可删除 `index.html` 中带有 `busuanzi` 的统计区域和脚本。
+
+## 修改其他信息
+
+- 个人简介、教育背景、研究方向、项目、荣誉和学术服务：编辑 `index.html` 中对应中文内容。
+- 更换头像：替换 `assets/profile.png`，保持文件名不变。
+- 更新简历：替换 `assets/resume.pdf`，保持文件名不变。
+- 更新分享预览图：替换 `assets/og.png`，保持文件名不变。
+
+页面不包含“科研观点”“校园经历”和“工作经历”栏目。
